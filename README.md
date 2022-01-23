@@ -1,7 +1,7 @@
 # NotBodySploit
-** Kurmak için **
+__Kurmak için__
 
-> cd NotBodySploit
+> cd NotBodySploit \n
 > python3 notbody.py
 
-** [Instagram](https://www.instagram.com/notbodyofficial/) **
+__[Instagram](https://www.instagram.com/notbodyofficial/)__
