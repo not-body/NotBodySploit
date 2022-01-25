@@ -1,8 +1,11 @@
-# NotBodySploit
+# NotBodySploit v1.1
 __Kurmak için__
+>git clone https://github.com/not-body/NotBodySploit
+>
+>cd NotBodySploit
+>
+>chmod +x build.sh
+>
+>notbody
 
-> cd NotBodySploit
-
-> python3 notbody.py
-
-__[Instagram](https://www.instagram.com/notbodyofficial/)__
+##__[Instagram](https://www.instagram.com/notbodyofficial/)__
