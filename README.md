@@ -8,4 +8,4 @@ __Kurmak için__
 >
 >notbody
 
-##__[Instagram](https://www.instagram.com/notbodyofficial/)__
+__[Instagram @notbodyofficial](https://www.instagram.com/notbodyofficial/)__
