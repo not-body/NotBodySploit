@@ -1,4 +1,4 @@
-# NotBodySploit v1.1
+# NotBodySploit v1.2
 __Kurmak için__
 >git clone https://github.com/not-body/NotBodySploit
 >
