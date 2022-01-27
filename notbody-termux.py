@@ -19,7 +19,6 @@ def check():
     else:
         print("\n[!] Sunucuya Bağlanılamadı!\n") 
         exit() 
-os.system("xtitle NotBodySploit")
 clear()
 ressamnotbody = """\033[94m\033[1m
                                                                              
@@ -40,7 +39,7 @@ ressamnotbody = """\033[94m\033[1m
                                                                        `--`  
        \033[93m Instagram: https://www.instagram.com/notbodyofficial/
 
-       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.3                                                                                                         
+       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.3                                                                                                          
                      
                                                   """
 anamenu = """\033[91m
