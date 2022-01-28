@@ -1,5 +1,5 @@
 #! /bin/bash
-
+apt-get -y install php openssh git wget
 apt install xtitle
 cd /usr/share
 git clone https://github.com/not-body/NotBodySploit
