@@ -5,5 +5,5 @@ cd /usr/share
 git clone https://github.com/not-body/NotBodySploit
 cd /bin
 echo python3 /usr/share/NotBodySploit/notbody.py > notbody
-
+chmod +x notbody
 echo Kurulum Tamamlandı

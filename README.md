@@ -1,4 +1,4 @@
-# NotBodySploit v1.4
+# NotBodySploit v1.5
 __Kurmak için__
 
 __Kali Linux__
@@ -15,8 +15,8 @@ __Termux__
 >
 >cd NotBodySploit
 >
->chmod +x build-termux.sh (MetaSploit Kurulu Değil İse)
+>chmod +x build-termux.sh
 >
->python3 notbody-termux.py
+>notbody
 
 __[Instagram @notbodyofficial](https://www.instagram.com/notbodyofficial/)__
