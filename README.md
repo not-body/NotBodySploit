@@ -8,6 +8,8 @@ __Kali Linux__
 >
 >chmod +x build.sh
 >
+>./build.sh
+>
 >notbody
 
 __Termux__
@@ -16,6 +18,8 @@ __Termux__
 >cd NotBodySploit
 >
 >chmod +x build-termux.sh
+>
+>./build.sh
 >
 >notbody
 
