@@ -19,7 +19,7 @@ __Termux__
 >
 >chmod +x build-termux.sh
 >
->./build.sh
+>./build-termux.sh
 >
 >notbody
 
